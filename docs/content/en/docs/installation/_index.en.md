@@ -246,6 +246,10 @@ this windows executable: [fission.exe](https://github.com/fission/fission/releas
 
 Finally, you're ready to use Fission!
 
+{{% notice info %}}
+it might take one or two mintues for fission to start running. check the status using `kubectl get pods -n fission`. 
+{{% /notice %}}
+
 ```sh
 $ fission env create --name nodejs --image fission/node-env:latest
 
@@ -256,6 +260,8 @@ $ fission function create --name hello --env nodejs --code hello.js
 $ fission function test --name hello
 Hello, world!
 ```
+
+
 
 For more language tutorials, visit [Language]({{% ref "../usage/languages/" %}}).
 
